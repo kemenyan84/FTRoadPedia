@@ -29,7 +29,8 @@ export class MyApp {
       { title: 'Home', component: HomePage, icon: 'home' },
       { title: 'Map', component: MapPage, icon: 'map' },
       { title: 'POI', component: ListPage, icon: 'pin' },
-      { title: 'Camera', component: CameraPage, icon: 'camera' }
+      { title: 'Camera', component: CameraPage, icon: 'camera' },
+      { title: 'Gallery', component: ListPage, icon: 'list'}
     ];
 
   }

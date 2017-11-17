@@ -7,8 +7,27 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content>
-  <ion-list>
+<ion-content class="bg">
+  <ion-grid>
+    <ion-row>
+      <ion-col col-4 col-sm *ngFor="let image of imageList">
+        <div class="img" tappable [ngStyle]="{'background-image': 'url(' + image.url + ')'}"></div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
+
+<!--
+
+Nota:
+
+col-sm - untuk saiz column (grid size) | xs, sm, md,
+
+-->
+
+<!-- origional code
+
+<ion-list>
     <button ion-item *ngFor="let item of items" (click)="itemTapped($event, item)">
       <ion-icon [name]="item.icon" item-start></ion-icon>
       {{item.title}}
@@ -20,4 +39,5 @@
   <div *ngIf="selectedItem" padding>
     You navigated here from <b>{{selectedItem.title}}</b>
   </div>
-</ion-content>
+
+-->

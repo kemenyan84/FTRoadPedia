@@ -10,9 +10,19 @@ export class ListPage {
   icons: string[];
   items: Array<{title: string, note: string, icon: string}>;
 
+  imageList: Array<any>;
+
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     // If we navigated to this page, we will have an item available as a nav param
     this.selectedItem = navParams.get('item');
+
+    this.imageList = [
+      {url: 'assets/imgs/naruto_1.jpg'},
+      {url: 'assets/imgs/naruto_2.jpg'},
+      {url: 'assets/imgs/naruto_3.jpg'},
+      {url: 'assets/imgs/naruto_4.jpg'},
+      {url: 'assets/imgs/naruto_5.jpg'}
+    ];
 
     // Let's populate this page with some filler content for funzies
     this.icons = ['flask', 'wifi', 'beer', 'football', 'basketball', 'paper-plane',
